@@ -10,10 +10,18 @@
         border: 2px solid #000;
         border-collapse: collapse;
         margin: auto;
+        margin-bottom:20px;
+      }
+      h2{
+        text-align: center;
       }
       thead, td, th{
         border: 2px solid #000;
         border-collapse: collapse;
+      }
+      fieldset{
+        width: 80%;
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -41,12 +49,13 @@
           </tbody>
           <% end %>
       </table>
-    
+    <fieldset>
     <form action='/gossips/new' method='POST'><!-- Formulaire nouveau Gossip-->
       Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
       Balance ton potin : <input type='text' name='gossip_content'/><br/>
       <input type='submit'/>
     </form>
+    </fieldset>
 
   </body>
 </html>
