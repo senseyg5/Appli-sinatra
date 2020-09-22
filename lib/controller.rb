@@ -18,12 +18,7 @@ class ApplicationController < Sinatra::Base
 	get '/gossips/:id' do
 		erb :gossip, locals: {gossip: Gossip.all[params[:id].to_i], id: params[:id].to_i, comments:Comment.all_with_id(params[:id].to_i)}
 	end
-	# ajout d'un commentaire lié a un gossip
-	post '/gossips/:id' do
-		Comment.new(params[:id], params["gossip_comment"]).save
-		#reload de la page
-		erb :gossip, locals: {gossip: Gossip.all[params[:id].to_i], id: params[:id].to_i, comments:Comment.all_with_id(params[:id].to_i)}
-	end
+	
 	#Page de modification de gossip
 	get '/gossips/:id/edit' do
 		erb :edit, locals: {gossip: Gossip.all[params[:id].to_i], id: params[:id].to_i}
@@ -33,5 +28,6 @@ class ApplicationController < Sinatra::Base
 		Gossip.update(params["gossip_author"], params["gossip_content"],params[:id].to_i)
 		redirect '/'
 	end
+
 
 end

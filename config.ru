@@ -3,6 +3,6 @@ Bundler.require
 
 require './lib/controller'
 require './lib/gossip'
-require './lib/comment'
+require './lib/assets/css/style.css'
 
 run ApplicationController

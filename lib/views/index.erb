@@ -1,27 +1,28 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>The Gossip Project</title>
-    <style>
+    <style type="text/css">
       body{
-        width: 100%;
+          width: 100%;
       }
       table{
-        width: 80%;
-        border: 2px solid #000;
-        border-collapse: collapse;
-        margin: auto;
-        margin-bottom:20px;
+          width: 80%;
+          border: 2px solid #000;
+          border-collapse: collapse;
+          margin: auto;
+          margin-bottom:20px;
       }
       h2{
-        text-align: center;
+          text-align: center;
       }
       thead, td, th{
-        border: 2px solid #000;
-        border-collapse: collapse;
+          border: 2px solid #000;
+          border-collapse: collapse;
       }
       fieldset{
-        width: 80%;
-        margin: 0 auto;
+          width: 80%;
+          margin: 0 auto;
       }
     </style>
   </head>
@@ -50,11 +51,11 @@
           <% end %>
       </table>
     <fieldset>
-    <form action='/gossips/new' method='POST'><!-- Formulaire nouveau Gossip-->
-      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
-      Balance ton potin : <input type='text' name='gossip_content'/><br/>
-      <input type='submit'/>
-    </form>
+      <form action='/gossips/new' method='POST'><!-- Formulaire nouveau Gossip-->
+        Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
+        Balance ton potin : <input type='text' name='gossip_content'/><br/>
+        <input type='submit'/>
+      </form>
     </fieldset>
 
   </body>
